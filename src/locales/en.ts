@@ -9,7 +9,8 @@ export default {
     loginOut: 'Login out',
     document: 'Document',
     reminder: 'Reminder',
-    loginOutMessage: 'Exit the system？',
+    loginOutMessage: 'Exit the system?',
+    back: 'Back',
     ok: 'OK',
     cancel: 'Cancel',
     reload: 'Reload current',
@@ -70,7 +71,10 @@ export default {
     copy: 'Copy',
     clearAndReset: 'Clear cache and reset',
     copySuccess: 'Copy success',
-    footer: 'Footer'
+    copyFailed: 'Copy failed',
+    footer: 'Footer',
+    uniqueOpened: 'Unique opened',
+    tagsViewIcon: 'Tags view icon'
   },
   size: {
     default: 'Default',
@@ -130,7 +134,9 @@ export default {
     authorization: 'Authorization',
     user: 'User management',
     role: 'Role management',
-    document: 'Document'
+    document: 'Document',
+    inputPassword: 'InputPassword',
+    sticky: 'Sticky'
   },
   analysis: {
     newUser: 'New user',
@@ -332,6 +338,9 @@ export default {
     center: 'center',
     right: 'right'
   },
+  stickyDemo: {
+    sticky: 'Sticky'
+  },
   tableDemo: {
     table: 'Table',
     tableDes: 'Secondary packaging of Table components based on ElementPlus',
@@ -410,5 +419,9 @@ export default {
     remark: 'Remark',
     remarkMessage1: 'Back end control routing permission',
     remarkMessage2: 'Front end control routing permission'
+  },
+  inputPasswordDemo: {
+    title: 'InputPassword',
+    inputPasswordDes: 'Secondary packaging of Input components based on ElementPlus'
   }
 }

@@ -10,6 +10,7 @@ export default {
     document: '项目文档',
     reminder: '温馨提示',
     loginOutMessage: '是否退出本系统？',
+    back: '返回',
     ok: '确定',
     cancel: '取消',
     reload: '重新加载',
@@ -70,7 +71,10 @@ export default {
     copy: '拷贝',
     clearAndReset: '清除缓存并且重置',
     copySuccess: '拷贝成功',
-    footer: '页脚'
+    copyFailed: '拷贝失败',
+    footer: '页脚',
+    uniqueOpened: '菜单手风琴',
+    tagsViewIcon: '标签页图标'
   },
   size: {
     default: '默认',
@@ -130,7 +134,9 @@ export default {
     authorization: '权限管理',
     user: '用户管理',
     role: '角色管理',
-    document: '文档'
+    document: '文档',
+    inputPassword: '密码输入框',
+    sticky: '黏性'
   },
   analysis: {
     newUser: '新增用户',
@@ -329,6 +335,9 @@ export default {
     center: '中',
     right: '右'
   },
+  stickyDemo: {
+    sticky: '黏性'
+  },
   tableDemo: {
     table: '表格',
     tableDes: '基于 ElementPlus 的 Table 组件二次封装',
@@ -373,7 +382,7 @@ export default {
   },
   descriptionsDemo: {
     descriptions: '描述',
-    descriptionsDes: '基于 ElementPlus 的 descriptions 组件二次封装',
+    descriptionsDes: '基于 ElementPlus 的 Descriptions 组件二次封装',
     username: '用户名',
     nickName: '昵称',
     phone: '联系电话',
@@ -406,5 +415,9 @@ export default {
     remark: '备注',
     remarkMessage1: '后端控制路由权限',
     remarkMessage2: '前端控制路由权限'
+  },
+  inputPasswordDemo: {
+    title: '密码输入框',
+    inputPasswordDes: '基于 ElementPlus 的 Input 组件二次封装'
   }
 }
