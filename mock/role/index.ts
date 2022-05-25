@@ -70,87 +70,87 @@ const adminList = [
   //     }
   //   ]
   // },
-  // {
-  //   path: '/components',
-  //   component: '#',
-  //   redirect: '/components/icon',
-  //   name: 'ComponentsDemo',
-  //   meta: {
-  //     title: 'router.component',
-  //     icon: 'bx:bxs-component',
-  //     alwaysShow: true
-  //   },
-  //   children: [
-  //     {
-  //       path: 'form',
-  //       component: '##',
-  //       name: 'Form',
-  //       meta: {
-  //         title: 'router.form',
-  //         alwaysShow: true
-  //       },
-  //       children: [
-  //         {
-  //           path: 'default-form',
-  //           component: 'views/Components/Form/DefaultForm',
-  //           name: 'DefaultForm',
-  //           meta: {
-  //             title: 'router.defaultForm'
-  //           }
-  //         },
-  //         {
-  //           path: 'use-form',
-  //           component: 'views/Components/Form/UseFormDemo',
-  //           name: 'UseForm',
-  //           meta: {
-  //             title: 'UseForm'
-  //           }
-  //         },
-  //         {
-  //           path: 'ref-form',
-  //           component: 'views/Components/Form/RefForm',
-  //           name: 'RefForm',
-  //           meta: {
-  //             title: 'RefForm'
-  //           }
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'table',
-  //       component: '##',
-  //       name: 'TableDemo',
-  //       meta: {
-  //         title: 'router.table',
-  //         alwaysShow: true
-  //       },
-  //       children: [
-  //         {
-  //           path: 'default-table',
-  //           component: 'views/Components/Table/DefaultTable',
-  //           name: 'DefaultTable',
-  //           meta: {
-  //             title: 'router.defaultTable'
-  //           }
-  //         },
-  //         {
-  //           path: 'use-table',
-  //           component: 'views/Components/Table/UseTableDemo',
-  //           name: 'UseTable',
-  //           meta: {
-  //             title: 'UseTable'
-  //           }
-  //         },
-  //         {
-  //           path: 'ref-table',
-  //           component: 'views/Components/Table/RefTable',
-  //           name: 'RefTable',
-  //           meta: {
-  //             title: 'RefTable'
-  //           }
-  //         }
-  //       ]
-  //     },
+  {
+    path: '/components',
+    component: '#',
+    redirect: '/components/icon',
+    name: 'ComponentsDemo',
+    meta: {
+      title: 'router.component',
+      icon: 'bx:bxs-component',
+      alwaysShow: true
+    },
+    children: [
+      {
+        path: 'form',
+        component: '##',
+        name: 'Form',
+        meta: {
+          title: 'router.form',
+          alwaysShow: true
+        },
+        children: [
+          {
+            path: 'default-form',
+            component: 'views/Components/Form/DefaultForm',
+            name: 'DefaultForm',
+            meta: {
+              title: 'router.defaultForm'
+            }
+          },
+          {
+            path: 'use-form',
+            component: 'views/Components/Form/UseFormDemo',
+            name: 'UseForm',
+            meta: {
+              title: 'UseForm'
+            }
+          },
+          {
+            path: 'ref-form',
+            component: 'views/Components/Form/RefForm',
+            name: 'RefForm',
+            meta: {
+              title: 'RefForm'
+            }
+          }
+        ]
+      },
+      {
+        path: 'table',
+        component: '##',
+        name: 'TableDemo',
+        meta: {
+          title: 'router.table',
+          alwaysShow: true
+        },
+        children: [
+          {
+            path: 'default-table',
+            component: 'views/Components/Table/DefaultTable',
+            name: 'DefaultTable',
+            meta: {
+              title: 'router.defaultTable'
+            }
+          },
+          {
+            path: 'use-table',
+            component: 'views/Components/Table/UseTableDemo',
+            name: 'UseTable',
+            meta: {
+              title: 'UseTable'
+            }
+          },
+          {
+            path: 'ref-table',
+            component: 'views/Components/Table/RefTable',
+            name: 'RefTable',
+            meta: {
+              title: 'RefTable'
+            }
+          }
+        ]
+      },
   //     {
   //       path: 'editor-demo',
   //       component: '##',
@@ -265,9 +265,9 @@ const adminList = [
   //       meta: {
   //         title: 'router.sticky'
   //       }
-  //     }
-  //   ]
-  // },
+      // }
+    ]
+  },
   // {
   //   path: '/hooks',
   //   component: '#',

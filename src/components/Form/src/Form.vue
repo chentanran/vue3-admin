@@ -291,6 +291,9 @@
 
 </script>
 
-<style>
-
+<style lang="less" scoped>
+.@{elNamespace}-form.@{namespace}-form .@{elNamespace}-row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
 </style>
