@@ -10,6 +10,7 @@
     "@purge-icons/generated": "^0.8.1",
     "@vueuse/core": "^8.5.0",
     "element-plus": "^2.2.0",
+    "intro.js": "^5.1.0",
     "mockjs": "^1.1.0",
     "nprogress": "^0.2.0",
     "pinia": "^2.0.14",

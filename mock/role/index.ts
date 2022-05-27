@@ -53,23 +53,23 @@ const adminList = [
   //     }
   //   ]
   // },
-  // {
-  //   path: '/guide',
-  //   component: '#',
-  //   name: 'Guide',
-  //   meta: {},
-  //   children: [
-  //     {
-  //       path: 'index',
-  //       component: 'views/Guide/Guide',
-  //       name: 'GuideDemo',
-  //       meta: {
-  //         title: 'router.guide',
-  //         icon: 'cib:telegram-plane'
-  //       }
-  //     }
-  //   ]
-  // },
+  {
+    path: '/guide',
+    component: '#',
+    name: 'Guide',
+    meta: {},
+    children: [
+      {
+        path: 'index',
+        component: 'views/Guide/Guide',
+        name: 'GuideDemo',
+        meta: {
+          title: 'router.guide',
+          icon: 'cib:telegram-plane'
+        }
+      }
+    ]
+  },
   {
     path: '/components',
     component: '#',
