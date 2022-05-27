@@ -170,14 +170,14 @@ const adminList = [
   //         }
   //       ]
   //     },
-  //     {
-  //       path: 'search',
-  //       component: 'views/Components/Search',
-  //       name: 'Search',
-  //       meta: {
-  //         title: 'router.search'
-  //       }
-  //     },
+      {
+        path: 'search',
+        component: 'views/Components/Search',
+        name: 'Search',
+        meta: {
+          title: 'router.search'
+        }
+      },
   //     {
   //       path: 'descriptions',
   //       component: 'views/Components/Descriptions',
