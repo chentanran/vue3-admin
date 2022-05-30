@@ -178,14 +178,14 @@ const adminList = [
           title: 'router.search'
         }
       },
-  //     {
-  //       path: 'descriptions',
-  //       component: 'views/Components/Descriptions',
-  //       name: 'Descriptions',
-  //       meta: {
-  //         title: 'router.descriptions'
-  //       }
-  //     },
+      {
+        path: 'descriptions',
+        component: 'views/Components/Descriptions',
+        name: 'Descriptions',
+        meta: {
+          title: 'router.descriptions'
+        }
+      },
   //     {
   //       path: 'image-viewer',
   //       component: 'views/Components/ImageViewer',
