@@ -53,7 +53,6 @@ import { useI18n } from '@/hooks/web/useI18n'
 import { useForm } from '@/hooks/web/useForm'
 import { findIndex } from '@/utils'
 import { cloneDeep } from 'lodash-es'
-import { formItemProps } from 'element-plus/lib/components'
 
 const { t } = useI18n()
 

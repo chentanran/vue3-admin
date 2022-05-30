@@ -151,25 +151,25 @@ const adminList = [
           }
         ]
       },
-  //     {
-  //       path: 'editor-demo',
-  //       component: '##',
-  //       name: 'EditorDemo',
-  //       meta: {
-  //         title: 'router.editor',
-  //         alwaysShow: true
-  //       },
-  //       children: [
-  //         {
-  //           path: 'editor',
-  //           component: 'views/Components/Editor/Editor',
-  //           name: 'Editor',
-  //           meta: {
-  //             title: 'router.richText'
-  //           }
-  //         }
-  //       ]
-  //     },
+      {
+        path: 'editor-demo',
+        component: '##',
+        name: 'EditorDemo',
+        meta: {
+          title: 'router.editor',
+          alwaysShow: true
+        },
+        children: [
+          {
+            path: 'editor',
+            component: 'views/Components/Editor/Editor',
+            name: 'Editor',
+            meta: {
+              title: 'router.richText'
+            }
+          }
+        ]
+      },
       {
         path: 'search',
         component: 'views/Components/Search',

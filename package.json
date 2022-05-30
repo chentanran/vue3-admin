@@ -9,6 +9,8 @@
   "dependencies": {
     "@purge-icons/generated": "^0.8.1",
     "@vueuse/core": "^8.5.0",
+    "@wangeditor/editor": "^5.1.0",
+    "@wangeditor/editor-for-vue": "^5.1.10",
     "element-plus": "^2.2.0",
     "intro.js": "^5.1.0",
     "mockjs": "^1.1.0",
