@@ -218,22 +218,22 @@ const adminList = [
   //         title: 'router.echart'
   //       }
   //     },
-  //     {
-  //       path: 'count-to',
-  //       component: 'views/Components/CountTo',
-  //       name: 'CountTo',
-  //       meta: {
-  //         title: 'router.countTo'
-  //       }
-  //     },
-  //     {
-  //       path: 'qrcode',
-  //       component: 'views/Components/Qrcode',
-  //       name: 'Qrcode',
-  //       meta: {
-  //         title: 'router.qrcode'
-  //       }
-  //     },
+      {
+        path: 'count-to',
+        component: 'views/Components/CountTo',
+        name: 'CountTo',
+        meta: {
+          title: 'router.countTo'
+        }
+      },
+      {
+        path: 'qrcode',
+        component: 'views/Components/Qrcode',
+        name: 'Qrcode',
+        meta: {
+          title: 'router.qrcode'
+        }
+      },
   //     {
   //       path: 'highlight',
   //       component: 'views/Components/Highlight',
