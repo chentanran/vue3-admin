@@ -202,14 +202,14 @@ const adminList = [
   //         title: 'router.dialog'
   //       }
   //     },
-  //     {
-  //       path: 'icon',
-  //       component: 'views/Components/Icon',
-  //       name: 'Icon',
-  //       meta: {
-  //         title: 'router.icon'
-  //       }
-  //     },
+      {
+        path: 'icon',
+        component: 'views/Components/Icon',
+        name: 'Icon',
+        meta: {
+          title: 'router.icon'
+        }
+      },
   //     {
   //       path: 'echart',
   //       component: 'views/Components/Echart',
