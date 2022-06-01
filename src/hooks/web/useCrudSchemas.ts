@@ -5,6 +5,14 @@ import { useDictStoreWithOut } from '@/store/modules/dict'
 import { useI18n } from '@/hooks/web/useI18n'
 import type { AxiosPromise } from 'axios'
 
+export type CrudSchema = Omit<TableColumn, 'children'> & {
+	search?: CurdSearchParams
+	table?: CurdTableParams
+	form?: CurdFormParams
+	detail?: CurdDescriptionsParams
+	children?: CrudSchema[]
+}
+
 type CurdSearchParams = {
 	// 是否显示查询项
 	show?: boolean
@@ -28,14 +36,6 @@ type CurdDescriptionsParams = {
 	// 是否显示表单项
 	show?: boolean
 } & Omit<DescriptionsSchema, 'field'>
-
-export type CrudSchema = Omit<TableColumn, 'children'> & {
-	search?: CurdSearchParams
-	table?: CurdTableParams
-	form?: CurdFormParams
-	detail?: CurdDescriptionsParams
-	children?: CrudSchema[]
-}
 
 const { t } = useI18n()
 
