@@ -15,7 +15,12 @@
     "skipLibCheck": false,
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "types": [
+      "@types/intro.js",
+      "@types/qrcode",
+      "unplugin-vue-define-options"
+    ]
   },
   "include": ["src/**/*", "types/**/*.d.ts", "mock/**/*.ts"],
   "exclude": ["dist", "node_modules"]

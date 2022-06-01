@@ -10,6 +10,7 @@ import PurgeIcons from 'vite-plugin-purge-icons'
 import styleImport, { ElementPlusResolve } from 'vite-plugin-style-import'
 import VueJsx from '@vitejs/plugin-vue-jsx'
 import { viteMockServe } from 'vite-plugin-mock'
+import DefineOptions from 'unplugin-vue-define-options/vite'
 
 const root = process.cwd()
 
@@ -73,6 +74,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
           setupProdMockServer()
           `
       }),
+      DefineOptions(),
     ],
     css: {
       preprocessorOptions: {

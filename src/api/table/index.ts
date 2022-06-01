@@ -19,6 +19,7 @@ export const getTableDetApi = ({ params }) => {
   return request.get<TableData>({ url: '/example/detail', params })
 }
 
-export const delTableListApi = ({ data }) => {
+export const delTableListApi = (option) => {
+  const { data } = option
   return request.post({ url: '/example/delete', data })
 }
