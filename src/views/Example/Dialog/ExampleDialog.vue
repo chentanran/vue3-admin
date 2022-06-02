@@ -1,3 +1,63 @@
+<template>
+  <ContentWrap>
+    <Search :schema="allSchemas.searchSchema" @search="setSearchParams" @reset="setSearchParams" />
+
+    <div class="mb-10px">
+      <ElButton type="primary" @click="AddAction">{{ t('exampleDemo.add') }}</ElButton>
+      <ElButton :loading="delLoading" type="danger" @click="delData(null, true)">
+        {{ t('exampleDemo.del') }}
+      </ElButton>
+    </div>
+
+    <Table
+      v-model:pageSize="tableObject.pageSize"
+      v-model:currentPage="tableObject.currentPage"
+      :columns="allSchemas.tableColumns"
+      :data="tableObject.tableList"
+      :loading="tableObject.loading"
+      :pagination="{
+        total: tableObject.total
+      }"
+      @register="register"
+    >
+      <template #action="{ row }">
+        <ElButton type="primary" @click="action(row, 'edit')">
+          {{ t('exampleDemo.edit') }}
+        </ElButton>
+        <ElButton type="success" @click="action(row, 'detail')">
+          {{ t('exampleDemo.detail') }}
+        </ElButton>
+        <ElButton type="danger" @click="delData(row, false)">
+          {{ t('exampleDemo.del') }}
+        </ElButton>
+      </template>
+    </Table>
+  </ContentWrap>
+
+  <Dialog v-model="dialogVisible" :title="dialogTitle">
+    <Write
+      v-if="actionType !== 'detail'"
+      ref="writeRef"
+      :form-schema="allSchemas.formSchema"
+      :current-row="tableObject.currentRow"
+    />
+
+    <Detail
+      v-if="actionType === 'detail'"
+      :detail-schema="allSchemas.detailSchema"
+      :current-row="tableObject.currentRow"
+    />
+
+    <template #footer>
+      <ElButton v-if="actionType !== 'detail'" type="primary" :loading="loading" @click="save">
+        {{ t('exampleDemo.save') }}
+      </ElButton>
+      <ElButton @click="dialogVisible = false">{{ t('dialogDemo.close') }}</ElButton>
+    </template>
+  </Dialog>
+</template>
+
+
 <script setup lang="ts">
 import { ContentWrap } from '@/components/ContentWrap'
 import { Search } from '@/components/Search'
@@ -166,8 +226,8 @@ const delLoading = ref(false)
 
 const delData = async (row: TableData | null, multiple: boolean) => {
   tableObject.currentRow = row
-  const { delList, getSelections } = methods
-  const selections = await getSelections()
+  const { delList, getSelection } = methods
+  const selections = await getSelection()
   delLoading.value = true
   await delList(
     multiple ? selections.map((v) => v.id) : [tableObject.currentRow?.id as string],
@@ -212,62 +272,3 @@ const save = async () => {
   })
 }
 </script>
-
-<template>
-  <ContentWrap>
-    <Search :schema="allSchemas.searchSchema" @search="setSearchParams" @reset="setSearchParams" />
-
-    <div class="mb-10px">
-      <ElButton type="primary" @click="AddAction">{{ t('exampleDemo.add') }}</ElButton>
-      <ElButton :loading="delLoading" type="danger" @click="delData(null, true)">
-        {{ t('exampleDemo.del') }}
-      </ElButton>
-    </div>
-
-    <Table
-      v-model:pageSize="tableObject.pageSize"
-      v-model:currentPage="tableObject.currentPage"
-      :columns="allSchemas.tableColumns"
-      :data="tableObject.tableList"
-      :loading="tableObject.loading"
-      :pagination="{
-        total: tableObject.total
-      }"
-      @register="register"
-    >
-      <template #action="{ row }">
-        <ElButton type="primary" @click="action(row, 'edit')">
-          {{ t('exampleDemo.edit') }}
-        </ElButton>
-        <ElButton type="success" @click="action(row, 'detail')">
-          {{ t('exampleDemo.detail') }}
-        </ElButton>
-        <ElButton type="danger" @click="delData(row, false)">
-          {{ t('exampleDemo.del') }}
-        </ElButton>
-      </template>
-    </Table>
-  </ContentWrap>
-
-  <Dialog v-model="dialogVisible" :title="dialogTitle">
-    <Write
-      v-if="actionType !== 'detail'"
-      ref="writeRef"
-      :form-schema="allSchemas.formSchema"
-      :current-row="tableObject.currentRow"
-    />
-
-    <Detail
-      v-if="actionType === 'detail'"
-      :detail-schema="allSchemas.detailSchema"
-      :current-row="tableObject.currentRow"
-    />
-
-    <template #footer>
-      <ElButton v-if="actionType !== 'detail'" type="primary" :loading="loading" @click="save">
-        {{ t('exampleDemo.save') }}
-      </ElButton>
-      <ElButton @click="dialogVisible = false">{{ t('dialogDemo.close') }}</ElButton>
-    </template>
-  </Dialog>
-</template>

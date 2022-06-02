@@ -1,8 +1,9 @@
 import type { CSSProperties } from 'vue'
+import type { AxiosPromise } from 'axios'
 
 declare global {
 
-	declare type ComponentName =
+	type ComponentName =
 		| 'Radio'
 		| 'RadioButton'
 		| 'Checkbox'
@@ -23,8 +24,9 @@ declare global {
 		| 'TimeSelect'
 		| 'SelectV2'
 		| 'InputPassword'
+		| 'Editor'
 
-	declare type ColProps = {
+	type ColProps = {
 		span?: number
 		xs?: number
 		sm?: number
@@ -34,9 +36,9 @@ declare global {
 		tag?: string
 	}
 
-	declare type FormValueType = string | number | string[] | number[] | boolean | undefined | null
+	type FormValueType = string | number | string[] | number[] | boolean | undefined | null
 
-	declare type FormItemProps = {
+	type FormItemProps = {
 		labelWidth?: string | number
 		required?: boolean
 		rules?: Recordable
@@ -46,7 +48,7 @@ declare global {
 		style?: CSSProperties
 	}
 
-	declare type ComponentOptions = {
+	type ComponentOptions = {
 		label?: string
 		value?: FormValueType
 		disabled?: boolean
@@ -55,18 +57,18 @@ declare global {
 		options?: ComponentOptions[]
 	} & Recordable
 
-	declare type ComponentOptionsAlias = {
+	type ComponentOptionsAlias = {
 		labelField?: string
 		valueField?: string
 	}
 
-	declare type ComponentProps = {
+	type ComponentProps = {
 		optionsAlias?: ComponentOptionsAlias
 		options?: ComponentOptions[]
 		optionsSlot?: boolean
 	} & Recordable
 
-	declare type FormSchema = {
+	type FormSchema = {
 		// 唯一值
 		field: string
 		// 标题
@@ -85,9 +87,11 @@ declare global {
 		value?: FormValueType
 		// 是否隐藏
 		hidden?: boolean
+		// 远程加载下拉项
+    api?: <T = any>() => AxiosPromise<T>
 	}
 
-	declare type FormSetPropsType = {
+	type FormSetPropsType = {
 		field: string
 		path: string
 		value: any

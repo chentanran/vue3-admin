@@ -186,14 +186,14 @@ const adminList = [
           title: 'router.descriptions'
         }
       },
-  //     {
-  //       path: 'image-viewer',
-  //       component: 'views/Components/ImageViewer',
-  //       name: 'ImageViewer',
-  //       meta: {
-  //         title: 'router.imageViewer'
-  //       }
-  //     },
+      {
+        path: 'image-viewer',
+        component: 'views/Components/ImageViewer',
+        name: 'ImageViewer',
+        meta: {
+          title: 'router.imageViewer'
+        }
+      },
       {
         path: 'dialog',
         component: 'views/Components/Dialog',
