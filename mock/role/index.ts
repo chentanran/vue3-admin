@@ -210,14 +210,14 @@ const adminList = [
           title: 'router.icon'
         }
       },
-  //     {
-  //       path: 'echart',
-  //       component: 'views/Components/Echart',
-  //       name: 'Echart',
-  //       meta: {
-  //         title: 'router.echart'
-  //       }
-  //     },
+      {
+        path: 'echart',
+        component: 'views/Components/Echart',
+        name: 'Echart',
+        meta: {
+          title: 'router.echart'
+        }
+      },
       {
         path: 'count-to',
         component: 'views/Components/CountTo',
@@ -234,14 +234,14 @@ const adminList = [
           title: 'router.qrcode'
         }
       },
-  //     {
-  //       path: 'highlight',
-  //       component: 'views/Components/Highlight',
-  //       name: 'Highlight',
-  //       meta: {
-  //         title: 'router.highlight'
-  //       }
-  //     },
+      {
+        path: 'highlight',
+        component: 'views/Components/Highlight',
+        name: 'Highlight',
+        meta: {
+          title: 'router.highlight'
+        }
+      },
   //     {
   //       path: 'infotip',
   //       component: 'views/Components/Infotip',
