@@ -1,5 +1,5 @@
 <template>
-	<ContentWrap>
+  <ContentWrap>
     <Search :schema="allSchemas.searchSchema" @search="setSearchParams" @reset="setSearchParams" />
 
     <div class="mb-10px">
@@ -35,6 +35,7 @@
   </ContentWrap>
 </template>
 
+
 <script setup lang="ts">
 import { ContentWrap } from '@/components/ContentWrap'
 import { Search } from '@/components/Search'
@@ -43,31 +44,31 @@ import { ElButton, ElTag } from 'element-plus'
 import { Table } from '@/components/Table'
 import { getTableListApi, delTableListApi } from '@/api/table'
 import { useTable } from '@/hooks/web/useTable'
-import type { TableData } from '@/api/table/types'
+import { TableData } from '@/api/table/types'
 import { h, reactive, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { useEmitt } from '@/hooks/web/useEmitt'
 import { CrudSchema, useCrudSchemas } from '@/hooks/web/useCrudSchemas'
-import { useRouter } from 'vue-router'
 
 defineOptions({
-	name: 'ExamplePage'
+  name: 'ExamplePage'
 })
 
 const { push } = useRouter()
 
 const { register, tableObject, methods } = useTable<
-{
-	total: number
-	list: TableData[]
-},
-TableData
+  {
+    total: number
+    list: TableData[]
+  },
+  TableData
 >({
-	getListApi: getTableListApi,
-	delListApi: delTableListApi,
-	response: {
-		list: 'list',
-		total: 'total'
-	}
+  getListApi: getTableListApi,
+  delListApi: delTableListApi,
+  response: {
+    list: 'list',
+    total: 'total'
+  }
 })
 
 const { getList, setSearchParams } = methods
@@ -75,19 +76,19 @@ const { getList, setSearchParams } = methods
 getList()
 
 useEmitt({
-	name: 'getList',
-	callback: (type: string) => {
-		if (type === 'add') {
-			tableObject.currentPage = 1
-		}
-		getList()
-	}
+  name: 'getList',
+  callback: (type: string) => {
+    if (type === 'add') {
+      tableObject.currentPage = 1
+    }
+    getList()
+  }
 })
 
 const { t } = useI18n()
 
 const crudSchemas = reactive<CrudSchema[]>([
-	{
+  {
     field: 'index',
     label: t('tableDemo.index'),
     type: 'index'
@@ -145,34 +146,26 @@ const crudSchemas = reactive<CrudSchema[]>([
 
 const { allSchemas } = useCrudSchemas(crudSchemas)
 
-
-console.log(allSchemas.searchSchema, '---------------------------')
-
 const AddAction = () => {
-	push('/exapmle/example-add')
+  push('/example/example-add')
 }
 
 const delLoading = ref(false)
 
 const delData = async (row: TableData | null, multiple: boolean) => {
-	tableObject.currentRow = row
-	const { delList, getSelection } = methods
-	const selections = await getSelection()
-	delLoading.value = true
-	await delList(
-		multiple ? selections.map((v) => v.id) : [tableObject.currentRow?.id as string],
-		multiple
-	).finally(() => {
-		delLoading.value = false
-	})
+  tableObject.currentRow = row
+  const { delList, getSelection } = methods
+  const selections = await getSelection()
+  delLoading.value = true
+  await delList(
+    multiple ? selections.map((v) => v.id) : [tableObject.currentRow?.id as string],
+    multiple
+  ).finally(() => {
+    delLoading.value = false
+  })
 }
 
 const action = (row: TableData, type: string) => {
-	push(`example/example-${type}?id=${row.id}`)
+  push(`/example/example-${type}?id=${row.id}`)
 }
-
 </script>
-
-<style>
-
-</style>
