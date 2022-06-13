@@ -242,14 +242,14 @@ const adminList = [
           title: 'router.highlight'
         }
       },
-  //     {
-  //       path: 'infotip',
-  //       component: 'views/Components/Infotip',
-  //       name: 'Infotip',
-  //       meta: {
-  //         title: 'router.infotip'
-  //       }
-  //     },
+      {
+        path: 'infotip',
+        component: 'views/Components/Infotip',
+        name: 'Infotip',
+        meta: {
+          title: 'router.infotip'
+        }
+      },
   //     {
   //       path: 'input-password',
   //       component: 'views/Components/InputPassword',
