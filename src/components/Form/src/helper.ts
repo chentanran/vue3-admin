@@ -2,9 +2,6 @@ import { useI18n } from '@/hooks/web/useI18n'
 import type { Slots } from 'vue'
 import { getSlot } from '@/utils/tsxHelper'
 import { PlaceholderMoel } from './types'
-import Schema from 'async-validator'
-import { placeholder } from '@babel/types'
-import { colProps } from 'element-plus'
 
 const { t } = useI18n()
 
