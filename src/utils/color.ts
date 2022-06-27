@@ -26,7 +26,7 @@ export const rgbToHex = (r: number, g: number, b: number) => {
 }
 
 /**
- * Transform a HEX color to its RGB representation
+ * 将HEX颜色转换为RGB表示 
  * @param {string} hex The color to transform
  * @returns The RGB representation of the passed color
  */
@@ -61,7 +61,7 @@ export const colorIsDark = (color: string) => {
 }
 
 /**
- * Darkens a HEX color given the passed percentage
+ * 根据通过的百分比将HEX颜色变暗 
  * @param {string} color The color to process
  * @param {number} amount The amount to change the color by
  * @returns {string} The HEX representation of the processed color
@@ -76,7 +76,7 @@ export const darken = (color: string, amount: number) => {
 }
 
 /**
- * Lightens a 6 char HEX color according to the passed percentage
+ * 根据通过的百分比，使6个字符的HEX颜色变亮 
  * @param {string} color The color to change
  * @param {number} amount The amount to change the color by
  * @returns {string} The processed color represented as HEX
@@ -90,9 +90,9 @@ export const lighten = (color: string, amount: number) => {
   )}${addLight(color.substring(4, 6), amount)}`
 }
 
-/* Suma el porcentaje indicado a un color (RR, GG o BB) hexadecimal para aclararlo */
+/* Sumael porcentaje indicado a un color (RR, GG o BB) hexadecimal para aclararlo */
 /**
- * Sums the passed percentage to the R, G or B of a HEX color
+ * 将通过的百分数加到十六进制颜色的R、G或B 
  * @param {string} color The color to change
  * @param {number} amount The amount to change the color by
  * @returns {string} The processed part of the color
@@ -104,7 +104,7 @@ const addLight = (color: string, amount: number) => {
 }
 
 /**
- * Calculates luminance of an rgb color
+ * 计算rgb颜色的亮度
  * @param {number} r red
  * @param {number} g green
  * @param {number} b blue
@@ -118,7 +118,7 @@ const luminanace = (r: number, g: number, b: number) => {
 }
 
 /**
- * Calculates contrast between two rgb colors
+ * 计算两个rgb颜色之间的对比度
  * @param {string} rgb1 rgb color 1
  * @param {string} rgb2 rgb color 2
  */
@@ -130,7 +130,7 @@ const contrast = (rgb1: string[], rgb2: number[]) => {
 }
 
 /**
- * Determines what the best text color is (black or white) based con the contrast with the background
+ * 根据与背景的对比确定最佳文本颜色(黑色或白色) 
  * @param hexColor - Last selected color by the user
  */
 export const calculateBestTextColor = (hexColor: string) => {
@@ -141,7 +141,7 @@ export const calculateBestTextColor = (hexColor: string) => {
 }
 
 /**
- * Subtracts the indicated percentage to the R, G or B of a HEX color
+ * 将HEX颜色的R、G或B减去所指示的百分比 
  * @param {string} color The color to change
  * @param {number} amount The amount to change the color by
  * @returns {string} The processed part of the color
